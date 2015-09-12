@@ -6,7 +6,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
     <title>Product Info</title>
 
 	<link href="css/bootstrap.min.css" rel="stylesheet">
@@ -18,6 +18,7 @@
 	<script src="js/common-new.js"></script>
     <script src="js/jgestures.js"></script>
     <script src="js/iscroll.js"></script>
+    <script src="img-touch-canvas.js"></script>
 
 	
   </head>
@@ -36,12 +37,12 @@
 		</div>
 		<div id="wrapper">
 		<div class="scroller">
-		<div class="container-fluid">
-			<img src="sample1.jpg" alt="Mountain View" style="width:304px;height:228px;">
-						
-                       
-			
-		</div>
+		<!--div class="container-fluid" style="width:304px;height:228px;">
+			<img src="sample1.jpg" alt="Mountain View" >                    			
+		</div-->
+        <div id="mycontainer" style="width: 400px; height: 326px"> <!-- set desired position and size to that div -->
+       		 <canvas id="mycanvas" style="width: 100%; height: 100%"></canvas>
+    	</div>
 		</div>
 		</div>
 	</div>
@@ -77,6 +78,13 @@
                                                             },500);
                                                  
                                                  });
+
+
+
+var gesturableImg = new ImgTouchCanvas({
+            canvas: document.getElementById('mycanvas'),
+            path: "images/sample1.jpg"
+        });
 
                            var data=localStorage.articleDetailsJSON;
                            console.log(data);
