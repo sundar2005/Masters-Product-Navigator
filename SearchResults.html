@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -105,6 +106,16 @@
    	document.addEventListener('DOMContentLoaded', function () { setTimeout(loaded, 200); }, false);
 
 var initScrollCode=0;
+
+$(document).ready(function () {
+  $('.search-container').hide();
+  //$('#option1').show();
+  $('#selectMe').change(function () {
+    $('.search-container').hide();
+    $('#'+$(this).val()).show();
+  })
+});
+
 	
         $(document).ready(function(){
                           $('#search-input').trigger('focus');
@@ -151,7 +162,7 @@ var initScrollCode=0;
                                       });
                          
                          
-						  $('#wrapper').css('top','96px');
+						  $('#wrapper').css('top','200px');
                         
                           
                           $('#searchCancel').bind("tapone", function(ev) {
@@ -171,6 +182,16 @@ var initScrollCode=0;
 	
 	</script>
 <style type="text/css">
+div .ui-li-thumb {
+    width: 80px;
+    text-align: center;
+}
+.imgThumb {
+    max-width: 80px;
+    max-height: 80px;
+    
+}
+
 </style>
 </head>
 <body>
@@ -181,7 +202,7 @@ var initScrollCode=0;
 <div class="col-xs-9 search-input-header">
 <!-- form action="#"-->
 	<input type="search" id="search-input"
-	class="search-input" value="" placeholder="Product Search" autofocus />
+	class="search-input" value="" placeholder="Product Search" autofocus />	
 <!-- /form-->
 <label id="searchDel" class="delete-input"></label></div>
 
@@ -194,29 +215,17 @@ MORE OPTIONS</div>
 Product Hierarchy</div>
 <div
 	class="col-lg-12 col-md-12 col-sm-12 col-xs-12 advance-search-input">
-<select class="prod-hierarchy-select department">
+<select id="selectMe" class="prod-hierarchy-select department">
 	<option value="Select">Select Department</option>
-	<option value="Select">Tools</option>
-	<option value="Select">Electrical & Hardware</option>
-	<option value="Select">Building & Timber</option>
-	<option value="Select">Garden & Outdoor Living</option>
-	<option value="Select">Bathroom & Plumbing</option>
-	<option value="Select">Fooring & Tiles</option>
-	<option value="Select">Painting</option>
-	<option value="Select">Decorating</option>
-	<option value="Select">Cleaning & Storage</option>
-	<option value="Select">Lighting & Fans</option>
+	<option value="option1">Lighting</option>
+	<option value="option2">Garden & Power</option>
+	<option value="option3">Kitchen</option>
+	<option value="option4">Fooring & Tiles</option>
+	<option value="option5">Painting</option>
 
-</select> <select class="prod-hierarchy-select display-none category">
-	<option value="Select">Select Category</option>
+</select> 
 
-</select> <select class="prod-hierarchy-select display-none sub-category">
-	<option value="Select">Select Sub-Category</option>
-
-</select> <select class="prod-hierarchy-select display-none segment">
-	<option value="Select">Select Segment</option>
-
-</select> <input id="loginBtn" onclick="hierarchyCall();" type="button"
+<input id="loginBtn" onclick="hierarchyCall();" type="button"
 	class="display-none col-lg-12 col-md-12 col-sm-12 col-xs-12 hieraychy-search-btn"
 	value="Search" /></div>
 </div>
@@ -226,18 +235,451 @@ Product Hierarchy</div>
 </div>
 
 <div id="wrapper">
-<div id="scroller">
+		<div id="scroller">
+           
+		<div class="search-container" id="option1">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contentBox search-results-content">
+			<section>
+                		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 imageWrapper"-->
+				<div class="row imageBox" style="height: 0px;">
+				<a href="ItemMap1.html">
+				<img alt="No Image Found" src="images/light1.JPG" class="contentImg" style="height: 70px; margin-top: 25px;"/>
+				</a>
+	                        <div class="imgStckBox"><span class="imgStckTxt" style="color: black; font-weight: bold;">Mort Bay Cone Pendant Black With Gold</span>
+	                        <span class="promo-till">Department: Lighting</span>
+	                        <span class="promo-price"><label class="new-price">$ 79.00</label><label class="old-price">$ 89.99</label></span>
+				</div>
+				</div>
+				</div>
+			</section>
+                		<hr class="list-divider"/>
 
-<div class="search-container">
-<div
-	class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contentBox search-results-content">
-</div>
-</div>
-<div id="pullUp"><span class="pullUpIcon"></span><span
-	class="pullUpLabel">Pull up to load more articles</span></div>
-</div>
+			<section>
+                		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 imageWrapper">
+				<div class="row imageBox" style="height: 0px;">
+				<a href="ItemMap1.html">
+				<img alt="No Image Found" href="ProductInfo-1.html" src="images/light2.JPG" class="contentImg" style="height: 70px; margin-top: 25px;"/>
+				</a>
+	                        <div class="imgStckBox"><span class="imgStckTxt" style="color: black; font-weight: bold;">Liteworks Maddox Batten Fixed DIY Light</span>
+	                        <span class="promo-till">Department: Lighting</span>
+	                        <span class="promo-price"><label class="new-price">$ 55.00</label><label class="old-price">$ 60.00</label></span>
+				</div>
+				</div>
+				</div>
+			</section>
+                		<hr class="list-divider"/>
 
-</div>
+			<section>
+                		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 imageWrapper">
+				<div class="row imageBox" style="height: 0px;">
+				<a href="ItemMap1.html">
+				<img alt="No Image Found" href="ProductInfo-1.html" src="images/light3.JPG" class="contentImg" style="height: 70px; margin-top: 25px;"/>
+				</a>
+	                        <div class="imgStckBox"><span class="imgStckTxt" style="color: black; font-weight: bold;">Chamberlain Cottage Sensor Light Black</span>
+	                        <span class="promo-till">Department: Lighting</span>
+	                        <span class="promo-price"><label class="new-price">$ 38.90</label><label class="old-price">$ 45.99</label></span>
+				</div>
+				</div>
+				</div>
+			</section>
+                		<hr class="list-divider"/>
+
+
+
+			<section>
+                		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 imageWrapper">
+				<div class="row imageBox" style="height: 0px;">
+				<a href="ItemMap1.html">
+				<img alt="No Image Found" href="ProductInfo-1.html" src="images/light4.JPG" class="contentImg" style="height: 70px; margin-top: 25px;"/>
+				</a>
+	                        <div class="imgStckBox"><span class="imgStckTxt" style="color: black; font-weight: bold;">Alden Tiered Disc Pendant Brown</span>
+	                        <span class="promo-till">Department: Lighting</span>
+	                        <span class="promo-price"><label class="new-price">$ 57.00</label><label class="old-price">$ 63.99</label></span>
+				</div>
+				</div>
+				</div>
+			</section>
+                		<hr class="list-divider"/>
+
+
+			<section>
+                		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 imageWrapper">
+				<div class="row imageBox" style="height: 0px;">
+				<a href="ItemMap1.html">
+				<img alt="No Image Found" href="ProductInfo-1.html" src="images/light5.JPG" class="contentImg" style="height: 70px; margin-top: 25px;"/>
+				</a>
+	                        <div class="imgStckBox"><span class="imgStckTxt" style="color: black; font-weight: bold;">Liteworks Kudo Desk Lamp Green</span>
+	                        <span class="promo-till">Department: Lighting</span>
+	                        <span class="promo-price"><label class="new-price">$ 15.90</label><label class="old-price">$ 17.99</label></span>
+				</div>
+				</div>
+				</div>
+			</section>
+                		<hr class="list-divider"/>
+
+			<section>
+                		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 imageWrapper">
+				<div class="row imageBox" style="height: 0px;">
+				<img alt="No Image Found" href="ProductInfo-1.html" src="images/light5.JPG" class="contentImg" style="height: 70px; margin-top: 25px;"/>
+	                        <div class="imgStckBox"><span class="imgStckTxt" style="color: black; font-weight: bold;">Hitachi 12V Cassette Driver Drill</span>
+	                        <span class="promo-till">Department: Lighting</span>
+	                        <span class="promo-price"><label class="new-price">$ 99.00</label><label class="old-price">$ 110.99</label></span>
+				</div>
+				</div>
+				</div>
+			</section>
+                		<hr class="list-divider"/>
+
+
+			
+
+			</div>
+		</div>
+
+
+		<div class="search-container" id="option2">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contentBox search-results-content">
+			<section>
+                		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 imageWrapper"-->
+				<div class="row imageBox" style="height: 0px;">
+				<a href="ProductInfo-1.html">
+				<img alt="No Image Found" src="images/garden1.JPG" class="contentImg" style="height: 70px; margin-top: 25px;"/>
+				</a>
+	                        <div class="imgStckBox"><span class="imgStckTxt" style="color: black; font-weight: bold;">EGO 56V Lawn Mower LM2001E</span>
+	                        <span class="promo-till">Department: Garden Power</span>
+	                        <span class="promo-price"><label class="new-price">$ 599.00</label><label class="old-price">$ 89.99</label></span>
+				</div>
+				</div>
+				</div>
+			</section>
+                		<hr class="list-divider"/>
+
+			<section>
+                		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 imageWrapper">
+				<div class="row imageBox" style="height: 0px;">
+				<img alt="No Image Found" href="ProductInfo-1.html" src="images/garden2.JPG" class="contentImg" style="height: 70px; margin-top: 25px;"/>
+	                        <div class="imgStckBox"><span class="imgStckTxt" style="color: black; font-weight: bold;">Troy Bilt 420cc Mini Rider</span>
+	                        <span class="promo-till">Department: Garden Power</span>
+	                        <span class="promo-price"><label class="new-price">$ 1799.00</label><label class="old-price">$ 60.00</label></span>
+				</div>
+				</div>
+				</div>
+			</section>
+                		<hr class="list-divider"/>
+
+			<section>
+                		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 imageWrapper">
+				<div class="row imageBox" style="height: 0px;">
+				<img alt="No Image Found" href="ProductInfo-1.html" src="images/garden3.JPG" class="contentImg" style="height: 70px; margin-top: 25px;"/>
+	                        <div class="imgStckBox"><span class="imgStckTxt" style="color: black; font-weight: bold;">Worx Line Trimmer 20V WG169E.5</span>
+	                        <span class="promo-till">Department: Garden Power</span>
+	                        <span class="promo-price"><label class="new-price">$ 171.00</label><label class="old-price">$ 45.99</label></span>
+				</div>
+				</div>
+				</div>
+			</section>
+                		<hr class="list-divider"/>
+
+
+
+			<section>
+                		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 imageWrapper">
+				<div class="row imageBox" style="height: 0px;">
+				<img alt="No Image Found" href="ProductInfo-1.html" src="images/garden4.JPG" class="contentImg" style="height: 70px; margin-top: 25px;"/>
+	                        <div class="imgStckBox"><span class="imgStckTxt" style="color: black; font-weight: bold;">Wesco 32cc Petrol Blower Vac - WS32PBV Black</span>
+	                        <span class="promo-till">Department: Garden Power</span>
+	                        <span class="promo-price"><label class="new-price">$ 134.00</label><label class="old-price">$ 63.99</label></span>
+				</div>
+				</div>
+				</div>
+			</section>
+                		<hr class="list-divider"/>
+
+
+			<section>
+                		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 imageWrapper">
+				<div class="row imageBox" style="height: 0px;">
+				<img alt="No Image Found" href="ProductInfo-1.html" src="images/garden5.JPG" class="contentImg" style="height: 70px; margin-top: 25px;"/>
+	                        <div class="imgStckBox"><span class="imgStckTxt" style="color: black; font-weight: bold;">McCulloch 49cc 200mm Post Hole Digger - MP49 Black</span>
+	                        <span class="promo-till">Department: Garden Power</span>
+	                        <span class="promo-price"><label class="new-price">$ 399.00</label><label class="old-price">$ 17.99</label></span>
+				</div>
+				</div>
+				</div>
+			</section>
+                		<hr class="list-divider"/>
+
+			
+
+
+			
+
+			</div>
+		</div>
+
+
+		<div class="search-container" id="option3">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contentBox search-results-content">
+			<section>
+                		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 imageWrapper"-->
+				<div class="row imageBox" style="height: 0px;">
+				<a href="ProductInfo-1.html">
+				<img alt="No Image Found" src="images/k1.JPG" class="contentImg" style="height: 70px; margin-top: 25px;"/>
+				</a>
+	                        <div class="imgStckBox"><span class="imgStckTxt" style="color: black; font-weight: bold;">Profile Glass Splashback Mint Cream 73x90cm</span>
+	                        <span class="promo-till">Department: Kitchen</span>
+	                        <span class="promo-price"><label class="new-price">$ 279.00</label><label class="old-price">$ 89.99</label></span>
+				</div>
+				</div>
+				</div>
+			</section>
+                		<hr class="list-divider"/>
+
+			<section>
+                		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 imageWrapper">
+				<div class="row imageBox" style="height: 0px;">
+				<img alt="No Image Found" href="ProductInfo-1.html" src="images/k2.JPG" class="contentImg" style="height: 70px; margin-top: 25px;"/>
+	                        <div class="imgStckBox"><span class="imgStckTxt" style="color: black; font-weight: bold;">Profile Glass Splashback Champagne 73x90cm</span>
+	                        <span class="promo-till">Department: Kitchen</span>
+	                        <span class="promo-price"><label class="new-price">$ 278.00</label><label class="old-price">$ 60.00</label></span>
+				</div>
+				</div>
+				</div>
+			</section>
+                		<hr class="list-divider"/>
+
+			<section>
+                		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 imageWrapper">
+				<div class="row imageBox" style="height: 0px;">
+				<img alt="No Image Found" href="ProductInfo-1.html" src="images/k3.JPG" class="contentImg" style="height: 70px; margin-top: 25px;"/>
+	                        <div class="imgStckBox"><span class="imgStckTxt" style="color: black; font-weight: bold;">Hafele Pull Out Bin 2x18L</span>
+	                        <span class="promo-till">Department: Kitchen</span>
+	                        <span class="promo-price"><label class="new-price">$ 141.00</label><label class="old-price">$ 45.99</label></span>
+				</div>
+				</div>
+				</div>
+			</section>
+                		<hr class="list-divider"/>
+
+
+
+			<section>
+                		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 imageWrapper">
+				<div class="row imageBox" style="height: 0px;">
+				<img alt="No Image Found" href="ProductInfo-1.html" src="images/k4.JPG" class="contentImg" style="height: 70px; margin-top: 25px;"/>
+	                        <div class="imgStckBox"><span class="imgStckTxt" style="color: black; font-weight: bold;">Hafele Home Double Soft Close Pull Out Bin 2x20 litre</span>
+	                        <span class="promo-till">Department: Kitchen</span>
+	                        <span class="promo-price"><label class="new-price">$ 97.00</label><label class="old-price">$ 63.99</label></span>
+				</div>
+				</div>
+				</div>
+			</section>
+                		<hr class="list-divider"/>
+
+
+			<section>
+                		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 imageWrapper">
+				<div class="row imageBox" style="height: 0px;">
+				<img alt="No Image Found" href="ProductInfo-1.html" src="images/k5.JPG" class="contentImg" style="height: 70px; margin-top: 25px;"/>
+	                        <div class="imgStckBox"><span class="imgStckTxt" style="color: black; font-weight: bold;">Omnifilter Universal 10 inch Cartridge 5 Micron 2 Pack - TO1</span>
+	                        <span class="promo-till">Department: Kitchen</span>
+	                        <span class="promo-price"><label class="new-price">$ 35.00</label><label class="old-price">$ 17.99</label></span>
+				</div>
+				</div>
+				</div>
+			</section>
+                		<hr class="list-divider"/>
+
+			
+
+
+			
+
+			</div>
+		</div>
+
+
+		<div class="search-container" id="option4">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contentBox search-results-content">
+			<section>
+                		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 imageWrapper"-->
+				<div class="row imageBox" style="height: 0px;">
+				<a href="ProductInfo-1.html">
+				<img alt="No Image Found" src="images/f1.JPG" class="contentImg" style="height: 70px; margin-top: 25px;"/>
+				</a>
+	                        <div class="imgStckBox"><span class="imgStckTxt" style="color: black; font-weight: bold;">Laminate Flooring Blackbutt 2.843m2/pack</span>
+	                        <span class="promo-till">Department: Flooring</span>
+	                        <span class="promo-price"><label class="new-price">$ 29.00</label><label class="old-price">$ 89.99</label></span>
+				</div>
+				</div>
+				</div>
+			</section>
+                		<hr class="list-divider"/>
+
+			<section>
+                		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 imageWrapper">
+				<div class="row imageBox" style="height: 0px;">
+				<img alt="No Image Found" href="ProductInfo-1.html" src="images/f2.JPG" class="contentImg" style="height: 70px; margin-top: 25px;"/>
+	                        <div class="imgStckBox"><span class="imgStckTxt" style="color: black; font-weight: bold;">Laminate Floor New Age Oak 8mm</span>
+	                        <span class="promo-till">Department: Flooring</span>
+	                        <span class="promo-price"><label class="new-price">$ 28.00</label><label class="old-price">$ 60.00</label></span>
+				</div>
+				</div>
+				</div>
+			</section>
+                		<hr class="list-divider"/>
+
+			<section>
+                		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 imageWrapper">
+				<div class="row imageBox" style="height: 0px;">
+				<img alt="No Image Found" href="ProductInfo-1.html" src="images/f3.JPG" class="contentImg" style="height: 70px; margin-top: 25px;"/>
+	                        <div class="imgStckBox"><span class="imgStckTxt" style="color: black; font-weight: bold;">Manhattan High Gloss High Definition Laminate Flooring 12mm</span>
+	                        <span class="promo-till">Department: Flooring</span>
+	                        <span class="promo-price"><label class="new-price">$ 57.00</label><label class="old-price">$ 45.99</label></span>
+				</div>
+				</div>
+				</div>
+			</section>
+                		<hr class="list-divider"/>
+
+
+
+			<section>
+                		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 imageWrapper">
+				<div class="row imageBox" style="height: 0px;">
+				<img alt="No Image Found" href="ProductInfo-1.html" src="images/f4.JPG" class="contentImg" style="height: 70px; margin-top: 25px;"/>
+	                        <div class="imgStckBox"><span class="imgStckTxt" style="color: black; font-weight: bold;">DTA Seamless Transition Trim 33mmx1.8m Silver</span>
+	                        <span class="promo-till">Department: Flooring</span>
+	                        <span class="promo-price"><label class="new-price">$ 21.00</label><label class="old-price">$ 63.99</label></span>
+				</div>
+				</div>
+				</div>
+			</section>
+                		<hr class="list-divider"/>
+
+
+			<section>
+                		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 imageWrapper">
+				<div class="row imageBox" style="height: 0px;">
+				<img alt="No Image Found" href="ProductInfo-1.html" src="images/f5.JPG" class="contentImg" style="height: 70px; margin-top: 25px;"/>
+	                        <div class="imgStckBox"><span class="imgStckTxt" style="color: black; font-weight: bold;">DTA Heavy Duty Carpet Puller</span>
+	                        <span class="promo-till">Department: Flooring</span>
+	                        <span class="promo-price"><label class="new-price">$ 47.00</label><label class="old-price">$ 17.99</label></span>
+				</div>
+				</div>
+				</div>
+			</section>
+                		<hr class="list-divider"/>
+
+			<section>
+                		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 imageWrapper">
+				<div class="row imageBox" style="height: 0px;">
+				<img alt="No Image Found" href="ProductInfo-1.html" src="images/light5.JPG" class="contentImg" style="height: 70px; margin-top: 25px;"/>
+	                        <div class="imgStckBox"><span class="imgStckTxt" style="color: black; font-weight: bold;">Hitachi 12V Cassette Driver Drill</span>
+	                        <span class="promo-till">Department: Lighting</span>
+	                        <span class="promo-price"><label class="new-price">$ 99.00</label><label class="old-price">$ 110.99</label></span>
+				</div>
+				</div>
+				</div>
+			</section>
+                		<hr class="list-divider"/>
+
+
+			
+
+			</div>
+		</div>
+        
+
+
+<div class="search-container" id="option5">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contentBox search-results-content">
+			<section>
+                		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 imageWrapper"-->
+				<div class="row imageBox" style="height: 0px;">
+				<a href="ProductInfo-1.html">
+				<img alt="No Image Found" src="images/p1.JPG" class="contentImg" style="height: 70px; margin-top: 25px;"/>
+				</a>
+	                        <div class="imgStckBox"><span class="imgStckTxt" style="color: black; font-weight: bold;">Pascol Trade Acrylic Sealer Undercoat White 4L</span>
+	                        <span class="promo-till">Department: Paint</span>
+	                        <span class="promo-price"><label class="new-price">$ 38.00</label><label class="old-price">$ 89.99</label></span>
+				</div>
+				</div>
+				</div>
+			</section>
+                		<hr class="list-divider"/>
+
+			<section>
+                		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 imageWrapper">
+				<div class="row imageBox" style="height: 0px;">
+				<img alt="No Image Found" href="ProductInfo-1.html" src="images/p2.JPG" class="contentImg" style="height: 70px; margin-top: 25px;"/>
+	                        <div class="imgStckBox"><span class="imgStckTxt" style="color: black; font-weight: bold;">Pascol Easy-Prep All Purpose Undercoat White 4L</span>
+	                        <span class="promo-till">Department: Paint</span>
+	                        <span class="promo-price"><label class="new-price">$ 59.00</label><label class="old-price">$ 60.00</label></span>
+				</div>
+				</div>
+				</div>
+			</section>
+                		<hr class="list-divider"/>
+
+			<section>
+                		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 imageWrapper">
+				<div class="row imageBox" style="height: 0px;">
+				<img alt="No Image Found" href="ProductInfo-1.html" src="images/p3.JPG" class="contentImg" style="height: 70px; margin-top: 25px;"/>
+	                        <div class="imgStckBox"><span class="imgStckTxt" style="color: black; font-weight: bold;">Valspar Primer Sealer Undercoat 4L</span>
+	                        <span class="promo-till">Department: Paint</span>
+	                        <span class="promo-price"><label class="new-price">$ 70.00</label><label class="old-price">$ 45.99</label></span>
+				</div>
+				</div>
+				</div>
+			</section>
+                		<hr class="list-divider"/>
+
+
+
+			<section>
+                		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 imageWrapper">
+				<div class="row imageBox" style="height: 0px;">
+				<img alt="No Image Found" href="ProductInfo-1.html" src="images/p4.JPG" class="contentImg" style="height: 70px; margin-top: 25px;"/>
+	                        <div class="imgStckBox"><span class="imgStckTxt" style="color: black; font-weight: bold;">909 100W Paint Sprayer</span>
+	                        <span class="promo-till">Department: Paint</span>
+	                        <span class="promo-price"><label class="new-price">$ 68.00</label><label class="old-price">$ 63.99</label></span>
+				</div>
+				</div>
+				</div>
+			</section>
+                		<hr class="list-divider"/>
+
+
+			<section>
+                		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 imageWrapper">
+				<div class="row imageBox" style="height: 0px;">
+				<img alt="No Image Found" href="ProductInfo-1.html" src="images/p5.JPG" class="contentImg" style="height: 70px; margin-top: 25px;"/>
+	                        <div class="imgStckBox"><span class="imgStckTxt" style="color: black; font-weight: bold;">Oldfields Protection Sheet Plastic 4 Pack</span>
+	                        <span class="promo-till">Department: Paint</span>
+	                        <span class="promo-price"><label class="new-price">$ 4.00</label><label class="old-price">$ 17.99</label></span>
+				</div>
+				</div>
+				</div>
+			</section>
+                		<hr class="list-divider"/>
+
+			
+
+
+			
+
+			</div>
+		</div>
+
+
+
+	<div id="pullUp">
+            <span class="pullUpIcon"></span><span class="pullUpLabel">Pull up to load more articles</span>
+        </div>
+		</div>
+     
+	</div>
 <div class="bg-overlay display-none"></div>
 <div class="loader display-none"><img src="images/loader.gif"
 	height="28" alt="sort-img" class="loader-img" />
