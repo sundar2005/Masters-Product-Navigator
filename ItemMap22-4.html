@@ -26,7 +26,7 @@
 				
 			</div>
 			<div class="col-lg-8 col-md-8 menu-name-header col-sm-8 col-xs-8 headerLeftBox" >
-				<span class="headerTitle" >NAVIGATOR</span>
+				<span class="headerTitle" >PRODUCT NAVIGATOR</span>
 			</div>
 			<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 headerRightBox" >
 				<img src="images/iconAdditionalActions.png" alt="backIcon" class="headerRightImgLogin" />
@@ -67,11 +67,11 @@
                            $('.back-btn-header').bind("tapone", function() {
                                                  setTimeout(function(){
                                                             if(sessionStorage.ean!="null"){
-                                                            window.location.href="SearchResults.html";
+                                                            window.location.href="ProductInfo-4.html";
                                                             sessionStorage.ean='null';
                                                             }
                                                             else
-                                                            window.location.href="SearchResults.html";
+                                                            window.location.href="ProductInfo-4.html";
                                                             },500);
                                                  
                                                  });
@@ -80,7 +80,7 @@
 
 var gesturableImg = new ImgTouchCanvas({
             canvas: document.getElementById('mycanvas'),
-            path: "images/map1.jpg"
+            path: "images/map2.jpg"
         });
 
                            var data=localStorage.articleDetailsJSON;
