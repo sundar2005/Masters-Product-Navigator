@@ -23,7 +23,16 @@
         pullDownEl, pullDownOffset,
         pullUpEl, pullUpOffset,
         generatedCount = 0;
-        
+        var data = {
+                //test:'test 1',
+                results: [ 
+                      {article: '16',description:'Stock in hand',department:"department",dept_name:"dept_name",category:"product",cat_name:"cat_name",
+                    	  sub_category:"subcategory",sub_cat_name:"sub_cat_name",segment:"segment",segment_name:"segment_name",eas_ind:"eas_ind"}
+                ],
+                testRcd:'value'   
+      };
+
+       // var data = {16,"Stock in hand"};
         function pullUpAction(){
             
             if((localStorage.totalRecords/20)-(localStorage.pageNum)>0){
@@ -58,7 +67,7 @@
         pullUpOffset = pullUpEl.offsetHeight;
         
         myScroll = new iScroll('wrapper', {
-                               /*scrollbarClass:'myscrollBar',*/
+                               scrollbarClass:'myscrollBar',
                                useTransition: true,
                                topOffset: pullDownOffset,
                                onRefresh: function () {
@@ -211,7 +220,7 @@ Product Hierarchy</div>
 	<option value="option1">Lighting</option>
 	<option value="option2">Garden & Power</option>
 	<option value="option3">Kitchen</option>
-	<option value="option4">Flooring & Tiles</option>
+	<option value="option4">Fooring & Tiles</option>
 	<option value="option5">Painting</option>
 
 </select> 
@@ -308,7 +317,18 @@ Product Hierarchy</div>
 			</section>
                 		<hr class="list-divider"/>
 
-			
+			<section>
+                		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 imageWrapper">
+				<div class="row imageBox" style="height: 0px;">
+				<img alt="No Image Found"  src="images/light5.jpg" class="contentImg" style="height: 70px; margin-top: 25px;"/>
+	                        <div class="imgStckBox"><span class="imgStckTxt" style="color: black; font-weight: bold;">Hitachi 12V Cassette Driver Drill</span>
+	                        <span class="promo-till">Department: Lighting</span>
+	                        <span class="promo-price"><label class="new-price">$ 99.00</label><label class="old-price">$ 110.99</label></span>
+				</div>
+				</div>
+				</div>
+			</section>
+                		<hr class="list-divider"/>
 
 
 			
@@ -327,7 +347,7 @@ Product Hierarchy</div>
 				</a>
 	                        <div class="imgStckBox"><span class="imgStckTxt" style="color: black; font-weight: bold;">EGO 56V Lawn Mower LM2001E</span>
 	                        <span class="promo-till">Department: Garden Power</span>
-	                        <span class="promo-price"><label class="new-price">$ 599.00</label><label class="old-price">$ 689.99</label></span>
+	                        <span class="promo-price"><label class="new-price">$ 599.00</label><label class="old-price">$ 89.99</label></span>
 				</div>
 				</div>
 				</div>
@@ -342,7 +362,7 @@ Product Hierarchy</div>
               </a>
 	                        <div class="imgStckBox"><span class="imgStckTxt" style="color: black; font-weight: bold;">Troy Bilt 420cc Mini Rider</span>
 	                        <span class="promo-till">Department: Garden Power</span>
-	                        <span class="promo-price"><label class="new-price">$ 1799.00</label><label class="old-price">$ 1860.00</label></span>
+	                        <span class="promo-price"><label class="new-price">$ 1799.00</label><label class="old-price">$ 60.00</label></span>
 				</div>
 				</div>
 				</div>
@@ -355,9 +375,9 @@ Product Hierarchy</div>
                 <a href="ItemMap2.html">
 				<img alt="No Image Found" src="images/garden3.jpg" class="contentImg" style="height: 70px; margin-top: 25px;"/>
                 </a>
-	                        <div class="imgStckBox"><span class="imgStckTxt" style="color: black; font-weight: bold;">Worx Line Trimmer 20V</span>
+	                        <div class="imgStckBox"><span class="imgStckTxt" style="color: black; font-weight: bold;">Worx Line Trimmer 20V WG169E.5</span>
 	                        <span class="promo-till">Department: Garden Power</span>
-	                        <span class="promo-price"><label class="new-price">$ 171.00</label><label class="old-price">$ 185.99</label></span>
+	                        <span class="promo-price"><label class="new-price">$ 171.00</label><label class="old-price">$ 45.99</label></span>
 				</div>
 				</div>
 				</div>
@@ -372,9 +392,9 @@ Product Hierarchy</div>
                 <a href="ItemMap2.html">
 				<img alt="No Image Found"  src="images/garden4.jpg" class="contentImg" style="height: 70px; margin-top: 25px;"/>
                 </a>
-	                        <div class="imgStckBox"><span class="imgStckTxt" style="color: black; font-weight: bold;">Wesco 32cc Petrol Blower Vac</span>
+	                        <div class="imgStckBox"><span class="imgStckTxt" style="color: black; font-weight: bold;">Wesco 32cc Petrol Blower Vac - WS32PBV Black</span>
 	                        <span class="promo-till">Department: Garden Power</span>
-	                        <span class="promo-price"><label class="new-price">$ 134.00</label><label class="old-price">$ 163.99</label></span>
+	                        <span class="promo-price"><label class="new-price">$ 134.00</label><label class="old-price">$ 63.99</label></span>
 				</div>
 				</div>
 				</div>
@@ -388,9 +408,9 @@ Product Hierarchy</div>
                 <a href="ItemMap2.html">
 				<img alt="No Image Found"  src="images/garden5.jpg" class="contentImg" style="height: 70px; margin-top: 25px;"/>
                 </a>
-	                        <div class="imgStckBox"><span class="imgStckTxt" style="color: black; font-weight: bold;">McCulloch 49cc Post Hole Digger</span>
+	                        <div class="imgStckBox"><span class="imgStckTxt" style="color: black; font-weight: bold;">McCulloch 49cc 200mm Post Hole Digger - MP49 Black</span>
 	                        <span class="promo-till">Department: Garden Power</span>
-	                        <span class="promo-price"><label class="new-price">$ 399.00</label><label class="old-price">$ 419.99</label></span>
+	                        <span class="promo-price"><label class="new-price">$ 399.00</label><label class="old-price">$ 17.99</label></span>
 				</div>
 				</div>
 				</div>
@@ -414,9 +434,9 @@ Product Hierarchy</div>
 				<a href="ItemMap3.html">
 				<img alt="No Image Found" src="images/k1.jpg" class="contentImg" style="height: 70px; margin-top: 25px;"/>
 				</a>
-	                        <div class="imgStckBox"><span class="imgStckTxt" style="color: black; font-weight: bold;">Profile Glass Splashback Mint</span>
+	                        <div class="imgStckBox"><span class="imgStckTxt" style="color: black; font-weight: bold;">Profile Glass Splashback Mint Cream 73x90cm</span>
 	                        <span class="promo-till">Department: Kitchen</span>
-	                        <span class="promo-price"><label class="new-price">$ 279.00</label><label class="old-price">$ 289.99</label></span>
+	                        <span class="promo-price"><label class="new-price">$ 279.00</label><label class="old-price">$ 89.99</label></span>
 				</div>
 				</div>
 				</div>
@@ -429,9 +449,9 @@ Product Hierarchy</div>
                 <a href="ItemMap3.html">
 				<img alt="No Image Found"  src="images/k2.jpg" class="contentImg" style="height: 70px; margin-top: 25px;"/>
                 </a>
-	                        <div class="imgStckBox"><span class="imgStckTxt" style="color: black; font-weight: bold;">Profile Glass Splashback Champagne</span>
+	                        <div class="imgStckBox"><span class="imgStckTxt" style="color: black; font-weight: bold;">Profile Glass Splashback Champagne 73x90cm</span>
 	                        <span class="promo-till">Department: Kitchen</span>
-	                        <span class="promo-price"><label class="new-price">$ 278.00</label><label class="old-price">$ 290.00</label></span>
+	                        <span class="promo-price"><label class="new-price">$ 278.00</label><label class="old-price">$ 60.00</label></span>
 				</div>
 				</div>
 				</div>
@@ -446,7 +466,7 @@ Product Hierarchy</div>
                 </a>
 	                        <div class="imgStckBox"><span class="imgStckTxt" style="color: black; font-weight: bold;">Hafele Pull Out Bin 2x18L</span>
 	                        <span class="promo-till">Department: Kitchen</span>
-	                        <span class="promo-price"><label class="new-price">$ 141.00</label><label class="old-price">$ 145.99</label></span>
+	                        <span class="promo-price"><label class="new-price">$ 141.00</label><label class="old-price">$ 45.99</label></span>
 				</div>
 				</div>
 				</div>
@@ -461,9 +481,9 @@ Product Hierarchy</div>
                 <a href="ItemMap3.html">
 				<img alt="No Image Found"  src="images/k4.jpg" class="contentImg" style="height: 70px; margin-top: 25px;"/>
                 </a>
-	                        <div class="imgStckBox"><span class="imgStckTxt" style="color: black; font-weight: bold;">Hafele Double Soft Pull Out Bin</span>
+	                        <div class="imgStckBox"><span class="imgStckTxt" style="color: black; font-weight: bold;">Hafele Home Double Soft Close Pull Out Bin 2x20 litre</span>
 	                        <span class="promo-till">Department: Kitchen</span>
-	                        <span class="promo-price"><label class="new-price">$ 97.00</label><label class="old-price">$ 103.99</label></span>
+	                        <span class="promo-price"><label class="new-price">$ 97.00</label><label class="old-price">$ 63.99</label></span>
 				</div>
 				</div>
 				</div>
@@ -477,9 +497,9 @@ Product Hierarchy</div>
                 <a href="ItemMap3.html">
 				<img alt="No Image Found"  src="images/k5.jpg" class="contentImg" style="height: 70px; margin-top: 25px;"/>
                 </a>
-	                        <div class="imgStckBox"><span class="imgStckTxt" style="color: black; font-weight: bold;">Omnifilter Universal 10 inch Cartridge</span>
+	                        <div class="imgStckBox"><span class="imgStckTxt" style="color: black; font-weight: bold;">Omnifilter Universal 10 inch Cartridge 5 Micron 2 Pack - TO1</span>
 	                        <span class="promo-till">Department: Kitchen</span>
-	                        <span class="promo-price"><label class="new-price">$ 35.00</label><label class="old-price">$ 37.99</label></span>
+	                        <span class="promo-price"><label class="new-price">$ 35.00</label><label class="old-price">$ 17.99</label></span>
 				</div>
 				</div>
 				</div>
@@ -503,9 +523,9 @@ Product Hierarchy</div>
 				<a href="ItemMap4.html">
 				<img alt="No Image Found" src="images/f1.jpg" class="contentImg" style="height: 70px; margin-top: 25px;"/>
 				</a>
-	                        <div class="imgStckBox"><span class="imgStckTxt" style="color: black; font-weight: bold;">Laminate Flooring Blackbutt</span>
+	                        <div class="imgStckBox"><span class="imgStckTxt" style="color: black; font-weight: bold;">Laminate Flooring Blackbutt 2.843m2/pack</span>
 	                        <span class="promo-till">Department: Flooring</span>
-	                        <span class="promo-price"><label class="new-price">$ 29.00</label><label class="old-price">$ 39.99</label></span>
+	                        <span class="promo-price"><label class="new-price">$ 29.00</label><label class="old-price">$ 89.99</label></span>
 				</div>
 				</div>
 				</div>
@@ -533,9 +553,9 @@ Product Hierarchy</div>
                 <a href="ItemMap4.html">
 				<img alt="No Image Found"  src="images/f3.jpg" class="contentImg" style="height: 70px; margin-top: 25px;"/>
                 </a>
-	                        <div class="imgStckBox"><span class="imgStckTxt" style="color: black; font-weight: bold;">Manhattan HD Laminate Flooring</span>
+	                        <div class="imgStckBox"><span class="imgStckTxt" style="color: black; font-weight: bold;">Manhattan High Gloss High Definition Laminate Flooring 12mm</span>
 	                        <span class="promo-till">Department: Flooring</span>
-	                        <span class="promo-price"><label class="new-price">$ 57.00</label><label class="old-price">$ 65.99</label></span>
+	                        <span class="promo-price"><label class="new-price">$ 57.00</label><label class="old-price">$ 45.99</label></span>
 				</div>
 				</div>
 				</div>
@@ -550,9 +570,9 @@ Product Hierarchy</div>
                 <a href="ItemMap4.html">
 				<img alt="No Image Found"  src="images/f4.jpg" class="contentImg" style="height: 70px; margin-top: 25px;"/>
                 </a>
-	                        <div class="imgStckBox"><span class="imgStckTxt" style="color: black; font-weight: bold;">DTA Seamless Transition Trim</span>
+	                        <div class="imgStckBox"><span class="imgStckTxt" style="color: black; font-weight: bold;">DTA Seamless Transition Trim 33mmx1.8m Silver</span>
 	                        <span class="promo-till">Department: Flooring</span>
-	                        <span class="promo-price"><label class="new-price">$ 21.00</label><label class="old-price">$ 23.99</label></span>
+	                        <span class="promo-price"><label class="new-price">$ 21.00</label><label class="old-price">$ 63.99</label></span>
 				</div>
 				</div>
 				</div>
@@ -589,9 +609,9 @@ Product Hierarchy</div>
 				<a href="ItemMap4.html">
 				<img alt="No Image Found" src="images/p1.jpg" class="contentImg" style="height: 70px; margin-top: 25px;"/>
 				</a>
-	                        <div class="imgStckBox"><span class="imgStckTxt" style="color: black; font-weight: bold;">Pascol Trade Acrylic Sealer</span>
+	                        <div class="imgStckBox"><span class="imgStckTxt" style="color: black; font-weight: bold;">Pascol Trade Acrylic Sealer Undercoat White 4L</span>
 	                        <span class="promo-till">Department: Paint</span>
-	                        <span class="promo-price"><label class="new-price">$ 38.00</label><label class="old-price">$ 39.99</label></span>
+	                        <span class="promo-price"><label class="new-price">$ 38.00</label><label class="old-price">$ 89.99</label></span>
 				</div>
 				</div>
 				</div>
@@ -604,7 +624,7 @@ Product Hierarchy</div>
                 <a href="ItemMap4.html">
 				<img alt="No Image Found"  src="images/p2.jpg" class="contentImg" style="height: 70px; margin-top: 25px;"/>
                 </a>
-	                        <div class="imgStckBox"><span class="imgStckTxt" style="color: black; font-weight: bold;">Pascol Easy-Prep All Purpose</span>
+	                        <div class="imgStckBox"><span class="imgStckTxt" style="color: black; font-weight: bold;">Pascol Easy-Prep All Purpose Undercoat White 4L</span>
 	                        <span class="promo-till">Department: Paint</span>
 	                        <span class="promo-price"><label class="new-price">$ 59.00</label><label class="old-price">$ 60.00</label></span>
 				</div>
@@ -621,7 +641,7 @@ Product Hierarchy</div>
                 </a>
 	                        <div class="imgStckBox"><span class="imgStckTxt" style="color: black; font-weight: bold;">Valspar Primer Sealer Undercoat 4L</span>
 	                        <span class="promo-till">Department: Paint</span>
-	                        <span class="promo-price"><label class="new-price">$ 70.00</label><label class="old-price">$ 75.99</label></span>
+	                        <span class="promo-price"><label class="new-price">$ 70.00</label><label class="old-price">$ 45.99</label></span>
 				</div>
 				</div>
 				</div>
